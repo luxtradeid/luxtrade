@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Luxtrade Academy Trade Plan — 17 April 2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{font-size:14px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f4f0;color:#1a1a18;min-height:100vh}
+
+/* HEADER */
+.hdr{background:#fff;border-bottom:1.5px solid #EF9F27;padding:14px 16px 12px}
+.hdr-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:10px}
+.brand-col{flex:1;min-width:0}
+.brand-live{display:flex;align-items:center;gap:8px;margin-bottom:3px}
+.live-dot-wrap{position:relative;width:10px;height:10px;flex-shrink:0}
+.live-ring{position:absolute;inset:0;border-radius:50%;background:#E24B4A;opacity:.3;animation:ping 1.6s ease-out infinite}
+.live-core{position:absolute;inset:2px;border-radius:50%;background:#E24B4A}
+.brand-name{font-size:15px;font-weight:700;letter-spacing:3px;color:#BA7517;font-family:monospace}
+.brand-tag{font-size:10px;color:#888780;font-style:italic;margin-bottom:2px}
+.brand-by{font-size:10px;color:#888780}
+.brand-by span{color:#BA7517;font-weight:500}
+.clock-col{text-align:right;flex-shrink:0}
+.clock-val{font-size:22px;font-weight:600;color:#1a1a18;font-family:monospace;line-height:1}
+.clock-date{font-size:10px;color:#888780;margin-top:2px}
+.clock-sesi{display:inline-block;margin-top:4px;padding:2px 8px;border-radius:3px;font-size:9px;font-weight:600;font-family:monospace;border:0.5px solid #e8e6df;background:#f5f4f0;color:#888780}
+
+/* META ROW */
+.meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding-top:10px;border-top:0.5px solid #e8e6df}
+.price-block{margin-right:4px}
+.price-lbl{font-size:9px;color:#888780;text-transform:uppercase;letter-spacing:.5px}
+.price-val{font-size:22px;font-weight:600;color:#3B6D11;font-family:monospace;line-height:1.2}
+.vline{width:1px;height:20px;background:#e8e6df}
+.bdg{padding:3px 8px;border-radius:3px;font-size:10px;font-weight:500;font-family:monospace;white-space:nowrap}
+.bg{background:#eaf3de;color:#27500a;border:0.5px solid #97C459}
+.ba{background:#faeeda;color:#633806;border:0.5px solid #EF9F27}
+.br{background:#fcebeb;color:#791F1F;border:0.5px solid #E24B4A}
+.bb{background:#e6f1fb;color:#0C447C;border:0.5px solid #85B7EB}
+
+/* PESAN */
+.msg{background:#fffbf3;border-bottom:0.5px solid #EF9F27;padding:10px 16px}
+.msg-head{display:flex;align-items:center;gap:6px;margin-bottom:6px}
+.msg-dot{width:5px;height:5px;border-radius:50%;background:#EF9F27}
+.msg-title{font-size:9px;font-weight:700;color:#BA7517;text-transform:uppercase;letter-spacing:1.5px;font-family:monospace}
+.msg-sub{font-size:9px;color:#888780;font-family:monospace}
+.msg-sep{width:1px;height:8px;background:rgba(239,159,39,.3)}
+.msg-body{font-size:12px;color:#2c2c2a;line-height:1.7;font-style:italic;padding-left:10px;border-left:2px solid #EF9F27;margin-bottom:6px}
+.msg-sig{font-size:10px;color:#BA7517;font-weight:500}
+
+/* COUNTDOWN */
+.cd{background:#fff;border-bottom:0.5px solid #e8e6df;padding:8px 16px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px}
+.cd-lbl{color:#888780}
+.cd-ses{color:#BA7517;font-weight:600}
+.cd-time{font-size:15px;font-weight:600;color:#1a1a18;font-family:monospace}
+.cd-dot{color:#d3d1c7}
+
+/* MAIN */
+.main{padding:12px 14px 60px}
+
+/* SECTION LABEL */
+.sec{font-size:9px;font-weight:700;letter-spacing:2px;color:#BA7517;border-left:3px solid #EF9F27;padding-left:8px;margin:18px 0 10px;text-transform:uppercase}
+.sec:first-child{margin-top:0}
+
+/* PHASES */
+.phases{display:grid;grid-template-columns:repeat(2,1fr);gap:5px}
+@media(min-width:480px){.phases{grid-template-columns:repeat(4,1fr)}}
+.ph{background:#fff;border:0.5px solid #e8e6df;border-radius:8px;padding:9px 8px;text-align:center;border-top:3px solid #e8e6df}
+.ph.now{border-top-color:#EF9F27;background:#fffbf3}
+.ph-t{font-size:9px;font-family:monospace;color:#888780;line-height:1.6}
+.ph-n{font-size:11px;font-weight:600;color:#444441;margin-top:3px}
+.ph.now .ph-n{color:#BA7517}
+.ph-tag{display:inline-block;margin-top:4px;padding:2px 7px;border-radius:3px;font-size:9px;font-weight:600;font-family:monospace}
+.tnt{background:#fcebeb;color:#791F1F}
+.tsg{background:#faeeda;color:#633806}
+.ten{background:#eaf3de;color:#27500a}
+.tcl{background:#fcebeb;color:#791F1F}
+.tbs{background:#e6f1fb;color:#0C447C}
+.tmg{background:#faeeda;color:#633806}
+
+/* SETUP CARDS — mobile: 1 col, tablet+: 2 col */
+.setups{display:flex;flex-direction:column;gap:10px}
+@media(min-width:580px){.setups{display:grid;grid-template-columns:1fr 1fr}}
+.scard{background:#fff;border-radius:10px;overflow:hidden;border:0.5px solid #e8e6df}
+.scard.pri{border-color:#97C459;border-width:1.5px}
+.scard.sec2{border-color:#EF9F27}
+.scard.dan{border-color:#F09595}
+.sc-hd{padding:10px 14px;display:flex;justify-content:space-between;align-items:center}
+.hg{background:#eaf3de}.ha{background:#faeeda}.hr{background:#fcebeb}.hb{background:#e6f1fb}
+.sc-title{font-size:12px;font-weight:600}
+.tg{color:#27500a}.ta{color:#633806}.tr{color:#791F1F}.tb{color:#0C447C}
+.sc-bd{background:#f9f8f5;padding:12px 14px}
+.row{display:flex;gap:8px;margin-bottom:6px;font-size:12px;line-height:1.5}
+.row:last-child{margin-bottom:0}
+.k{color:#888780;min-width:70px;flex-shrink:0;font-size:10px;text-transform:uppercase;letter-spacing:.3px;padding-top:1px}
+.v{color:#1a1a18;flex:1;font-family:monospace;font-size:12px;word-break:break-word}
+.vg{color:#3B6D11;font-weight:500}
+.vr{color:#A32D2D;font-weight:500}
+.sep{border-top:0.5px solid #e8e6df;margin:8px 0}
+.mbar{padding:8px 10px;font-size:11px;line-height:1.6;margin-top:10px;border-radius:4px;border-left:3px solid}
+.mba{background:#faeeda;color:#633806;border-color:#EF9F27}
+.mbr{background:#fcebeb;color:#791F1F;border-color:#E24B4A}
+.mbb{background:#e6f1fb;color:#0C447C;border-color:#85B7EB}
+
+/* STATUS BADGE */
+.st{padding:3px 9px;border-radius:3px;font-size:9px;font-weight:600;font-family:monospace;white-space:nowrap}
+.st-w{background:#faeeda;color:#633806;border:0.5px solid #EF9F27}
+.st-t{background:#eaf3de;color:#27500a;border:0.5px solid #3B6D11;animation:blink 1s steps(1) infinite}
+.st-tp{background:#d6eec5;color:#175c09;border:0.5px solid #3B6D11}
+.st-sl{background:#fcebeb;color:#791F1F;border:0.5px solid #A32D2D}
+.st-x{background:#f1efe8;color:#5f5e5a;border:0.5px solid #b4b2a9}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* LEVELS */
+.levels{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+@media(min-width:480px){.levels{grid-template-columns:repeat(4,1fr)}}
+.lc{background:#fff;border:0.5px solid #e8e6df;border-radius:8px;padding:10px 12px;border-left:3px solid}
+.lcr{border-left-color:#A32D2D}.lcg{border-left-color:#3B6D11}.lca{border-left-color:#EF9F27}.lcn{border-left-color:#b4b2a9}
+.lc-n{font-size:9px;color:#888780;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.lc-v{font-size:12px;font-weight:600;font-family:monospace;word-break:break-word}
+.lcr .lc-v{color:#A32D2D}.lcg .lc-v{color:#3B6D11}.lca .lc-v{color:#854F0B}.lcn .lc-v{color:#5f5e5a}
+.lc-d{font-size:9px;color:#888780;margin-top:2px}
+
+/* ZONES */
+.zones{display:flex;flex-direction:column;gap:6px}
+@media(min-width:400px){.zones{display:grid;grid-template-columns:repeat(3,1fr)}}
+.zc{background:#fff;border-radius:8px;padding:10px;text-align:center}
+.zr{border:1px solid #F09595}.za2{border:1px solid #EF9F27}
+.z-l{font-size:9px;color:#888780;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px;font-weight:600}
+.z-e{font-size:11px;font-family:monospace;color:#185FA5;display:block;margin-bottom:3px;font-weight:500}
+.z-w{font-size:11px;font-family:monospace;color:#3B6D11;display:block;font-weight:500}
+
+/* HASIL */
+.res-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:10px}
+@media(min-width:400px){.res-grid{grid-template-columns:repeat(4,1fr)}}
+.res-card{background:#fff;border:0.5px solid #e8e6df;border-radius:8px;padding:12px;text-align:center}
+.res-lbl{font-size:10px;color:#888780;margin-bottom:4px}
+.res-val{font-size:22px;font-weight:600;font-family:monospace;color:#1a1a18}
+.res-note{background:#f9f8f5;border:0.5px solid #e8e6df;border-radius:8px;padding:10px 14px;font-size:11px;color:#5f5e5a;font-style:italic;line-height:1.6}
+
+/* RULES */
+.ri{display:flex;gap:10px;padding:11px 13px;background:#fff;border:0.5px solid #e8e6df;border-radius:8px;margin-bottom:6px;font-size:12px;line-height:1.6}
+.rix{color:#A32D2D;font-weight:700;flex-shrink:0;font-size:13px}
+.rio{color:#3B6D11;font-weight:700;flex-shrink:0;font-size:13px}
+.rii{color:#185FA5;font-weight:700;flex-shrink:0;font-size:13px}
+.ri-t{color:#5f5e5a;flex:1}
+.ri-t strong{color:#1a1a18;font-weight:600}
+
+/* FOOTER */
+.footer{border-top:0.5px solid #e8e6df;padding:14px 16px;text-align:center;font-size:10px;color:#888780;font-family:monospace;background:#fff}
+.footer span{color:#BA7517;font-weight:600}
+
+/* OWNER PANEL */
+.op{background:#fff;border:1.5px solid #EF9F27;border-radius:12px;padding:16px;margin:0 14px 40px}
+.op-title{font-size:12px;font-weight:600;color:#BA7517;margin-bottom:14px;display:flex;align-items:center;gap:7px;font-family:monospace}
+.op-sec{font-size:9px;color:#888780;text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;font-family:monospace;font-weight:600}
+.op-row{display:flex;flex-direction:column;gap:4px;margin-bottom:8px}
+.op-row label{font-size:11px;color:#5f5e5a}
+.op-row input,.op-row textarea{padding:9px 10px;border:0.5px solid #d3d1c7;border-radius:6px;font-size:12px;background:#fff;color:#1a1a18;font-family:inherit;width:100%}
+.op-row textarea{min-height:72px;resize:vertical;line-height:1.6}
+.op-sep{border-top:0.5px solid #e8e6df;margin:14px 0}
+.bias-btns{display:flex;gap:6px;flex-wrap:wrap}
+.bbtn{padding:7px 12px;border-radius:5px;font-size:11px;cursor:pointer;border:0.5px solid #e8e6df;background:#fff;color:#5f5e5a;font-family:monospace}
+.act-bull{background:#eaf3de;color:#27500a;border-color:#3B6D11;font-weight:600}
+.act-bear{background:#fcebeb;color:#791F1F;border-color:#A32D2D;font-weight:600}
+.act-neu{background:#e6f1fb;color:#0C447C;border-color:#85B7EB;font-weight:600}
+.act-rng{background:#faeeda;color:#633806;border-color:#EF9F27;font-weight:600}
+.setup-ctrl{background:#f9f8f5;border:0.5px solid #e8e6df;border-radius:8px;padding:11px 12px;margin-bottom:8px}
+.setup-ctrl-name{font-size:11px;font-weight:600;color:#444441;margin-bottom:8px}
+.status-btns{display:flex;gap:6px;flex-wrap:wrap}
+.sbtn{padding:6px 11px;border-radius:4px;font-size:11px;cursor:pointer;border:0.5px solid #e8e6df;background:#fff;color:#5f5e5a;font-family:monospace}
+.active-w{background:#faeeda;color:#633806;border-color:#EF9F27;font-weight:600}
+.active-t{background:#eaf3de;color:#27500a;border-color:#3B6D11;font-weight:600}
+.active-tp{background:#d6eec5;color:#175c09;border-color:#3B6D11;font-weight:600}
+.active-sl{background:#fcebeb;color:#791F1F;border-color:#A32D2D;font-weight:600}
+.active-x{background:#f1efe8;color:#5f5e5a;border-color:#b4b2a9;font-weight:600}
+.res-inputs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.res-inp-item{display:flex;flex-direction:column;gap:4px}
+.res-inp-item label{font-size:11px;color:#5f5e5a}
+.res-inp-item input{padding:8px 10px;border:0.5px solid #d3d1c7;border-radius:6px;font-size:12px;background:#fff;color:#1a1a18;font-family:monospace}
+.apply-btn{width:100%;padding:13px;background:#EF9F27;color:#412402;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:4px}
+.apply-btn:active{background:#BA7517}
+
+@keyframes ping{0%{transform:scale(1);opacity:.3}70%{transform:scale(2.4);opacity:0}100%{transform:scale(2.4);opacity:0}}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-top">
+    <div class="brand-col">
+      <div class="brand-live" id="brandTap">
+        <div class="live-dot-wrap"><div class="live-ring"></div><div class="live-core"></div></div>
+        <div class="brand-name">LUXTRADE ACADEMY</div>
+      </div>
+      <div class="brand-tag">Akses eksklusif · Khusus anggota Luxtrade Academy</div>
+      <div class="brand-by">Analisa oleh <span>Tim Luxtrade Academy</span> &amp; <span>Prima Yuda, S.T., M.T., CTA.</span></div>
+    </div>
+    <div class="clock-col">
+      <div class="clock-val" id="clk">--:--:--</div>
+      <div class="clock-date" id="clkd">WIB</div>
+      <div id="sesiNow" class="clock-sesi">memuat...</div>
+    </div>
+  </div>
+  <div class="meta">
+    <div class="price-block">
+      <div class="price-lbl">Harga analisa</div>
+      <div class="price-val" id="priceDisp">4,823.00</div>
+    </div>
+    <div class="vline"></div>
+    <span class="bdg bg" id="biasDisp">Bias: Bullish</span>
+    <span class="bdg ba" id="cond1Disp">Ranging pre-expansion</span>
+    <span class="bdg br" id="cond2Disp">Fakeout risk aktif</span>
+    <span class="bdg bb" id="cond3Disp">Prioritas: Buy the dip</span>
+  </div>
+</div>
+
+<div class="msg">
+  <div class="msg-head">
+    <div class="msg-dot"></div>
+    <div class="msg-title">Luxtrade Academy</div>
+    <div class="msg-sep"></div>
+    <div class="msg-sub">Daily Trade Signal</div>
+  </div>
+  <div class="msg-body" id="msgDisp">Disiplin bukan membatasi kebebasan — justru disiplin yang menciptakannya. Setiap level sudah ditandai, setiap skenario sudah disiapkan. Tugas kamu hari ini hanya satu: ikuti plan, bukan perasaan.</div>
+  <div class="msg-sig">— Tim Luxtrade Academy &amp; Prima Yuda, S.T., M.T., CTA.</div>
+</div>
+
+<div class="cd">
+  <span class="cd-lbl">Sesi berikutnya</span>
+  <span class="cd-dot">—</span>
+  <span class="cd-ses" id="cdN">memuat...</span>
+  <span class="cd-dot">·</span>
+  <span class="cd-lbl">mulai dalam</span>
+  <span class="cd-time" id="cdT">--:--:--</span>
+  <span id="cdW" style="font-size:10px;color:#888780"></span>
+</div>
+
+<div class="main">
+
+  <div class="sec">Timeline sesi hari ini</div>
+  <div class="phases">
+    <div class="ph" id="ph0" style="border-top-color:#b4b2a9"><div class="ph-t">00:00–03:00 ET<br>11:00–14:00 WIB</div><div class="ph-n">Dead Zone</div><span class="ph-tag tnt">No trade</span></div>
+    <div class="ph" id="ph1" style="border-top-color:#EF9F27"><div class="ph-t">03:00–05:00 ET<br>14:00–16:00 WIB</div><div class="ph-n">Pre-London</div><span class="ph-tag tsg">Siaga</span></div>
+    <div class="ph" id="ph2" style="border-top-color:#3B6D11"><div class="ph-t">05:00–08:00 ET<br>16:00–19:00 WIB</div><div class="ph-n">London Open</div><span class="ph-tag ten">Zona entry</span></div>
+    <div class="ph" id="ph3" style="border-top-color:#A32D2D"><div class="ph-t">08:00–08:30 ET<br>19:00–19:30 WIB</div><div class="ph-n">Pre-Data</div><span class="ph-tag tcl">Close semua</span></div>
+    <div class="ph" id="ph4" style="border-top-color:#A32D2D"><div class="ph-t">08:30 ET<br>19:30 WIB</div><div class="ph-n">Data Release</div><span class="ph-tag tnt">No trade</span></div>
+    <div class="ph" id="ph5" style="border-top-color:#185FA5"><div class="ph-t">09:00–11:30 ET<br>20:00–22:30 WIB</div><div class="ph-n">Post-Data NY</div><span class="ph-tag tbs">Setup terbaik</span></div>
+    <div class="ph" id="ph6" style="border-top-color:#854F0B"><div class="ph-t">11:30–14:00 ET<br>22:30–01:00 WIB</div><div class="ph-n">NY Midday</div><span class="ph-tag tmg">Manage posisi</span></div>
+    <div class="ph" id="ph7" style="border-top-color:#0F6E56"><div class="ph-t">14:00–17:00 ET<br>01:00–04:00 WIB</div><div class="ph-n">NY Close</div><span class="ph-tag tcl">Close &amp; reset</span></div>
+  </div>
+
+  <div class="sec">Plan hari ini — XAU/USD</div>
+  <div class="setups">
+
+    <div class="scard pri">
+      <div class="sc-hd hg"><span class="sc-title tg">Setup 1 · Buy the dip</span><span class="st st-w" id="d-s1">Menunggu</span></div>
+      <div class="sc-bd">
+        <div class="row"><span class="k">Area masuk</span><span class="v vg">4,800 – 4,812</span></div>
+        <div class="row"><span class="k">Trigger</span><span class="v">Candle M15 tutup bullish di atas 4,814</span></div>
+        <div class="row"><span class="k">Entry</span><span class="v vg">4,803–4,808 (limit)<br>4,815–4,818 (stop)</span></div>
+        <div class="row"><span class="k">Stop loss</span><span class="v vr">4,789 – 4,792</span></div>
+        <div class="sep"></div>
+        <div class="row"><span class="k">Target 1</span><span class="v vg">4,828–4,832 · lepas 50%, SL ke BE</span></div>
+        <div class="row"><span class="k">Target 2</span><span class="v vg">4,838–4,842 · lepas 30%</span></div>
+        <div class="row"><span class="k">Target 3</span><span class="v vg">4,852–4,858 · sisa 20%</span></div>
+        <div class="sep"></div>
+        <div class="row"><span class="k">R:R</span><span class="v">1:1.4 · 1:2.1 · 1:2.8</span></div>
+        <div class="row"><span class="k">Jam ideal</span><span class="v">16:00–19:00 WIB</span></div>
+        <div class="mbar mba">Kalau H1 close di bawah 4,790 — batalkan semua. Jangan average down.</div>
+      </div>
+    </div>
+
+    <div class="scard sec2">
+      <div class="sc-hd ha"><span class="sc-title ta">Setup 2 · Breakout buy</span><span class="st st-w" id="d-s2">Menunggu</span></div>
+      <div class="sc-bd">
+        <div class="row"><span class="k">Trigger</span><span class="v">Candle M15 solid tutup di atas 4,842, lalu retest bertahan</span></div>
+        <div class="row"><span class="k">Entry</span><span class="v vg">4,838–4,841 saat retest</span></div>
+        <div class="row"><span class="k">Stop loss</span><span class="v vr">4,828 – 4,830</span></div>
+        <div class="sep"></div>
+        <div class="row"><span class="k">Target 1</span><span class="v vg">4,852–4,855 · SL ke BE</span></div>
+        <div class="row"><span class="k">Target 2</span><span class="v vg">4,865–4,870</span></div>
+        <div class="row"><span class="k">Target 3</span><span class="v vg">4,875–4,882</span></div>
+        <div class="sep"></div>
+        <div class="row"><span class="k">Jam ideal</span><span class="v">16:00–19:00 WIB</span></div>
+        <div class="mbar mba">Fakeout sering terjadi — tunggu retest dulu sebelum masuk.</div>
+      </div>
+    </div>
+
+    <div class="scard">
+      <div class="sc-hd hb"><span class="sc-title tb">Setup 3 · Post-data NY</span><span class="st st-w" id="d-s3">Menunggu</span></div>
+      <div class="sc-bd">
+        <div class="row"><span class="k">Jam aktif</span><span class="v">20:00–22:30 WIB</span></div>
+        <div class="sep"></div>
+        <div class="row"><span class="k">USD lemah</span><span class="v vg">Entry 4,840–4,848 · SL 4,828<br>T1 4,858 · T2 4,875</span></div>
+        <div class="row"><span class="k">USD kuat</span><span class="v vg">Entry 4,783–4,793 · SL 4,768<br>T1 4,810 · T2 4,828</span></div>
+        <div class="sep"></div>
+        <div class="mbar mbb">Tunggu 2 candle M15 stabil setelah spike data sebelum masuk.</div>
+      </div>
+    </div>
+
+    <div class="scard dan">
+      <div class="sc-hd hr"><span class="sc-title tr">Setup 4 · Bias balik bearish</span><span class="st st-x" id="d-s4">Tidak aktif</span></div>
+      <div class="sc-bd">
+        <div class="mbar mbr" style="margin-top:0;margin-bottom:10px">Hanya aktif kalau H1 close di bawah 4,790 dengan body candle solid.</div>
+        <div class="row"><span class="k">Trigger</span><span class="v">Lower high terbentuk → H1 close &lt; 4,790 → retest gagal</span></div>
+        <div class="row"><span class="k">Entry sell</span><span class="v vr">4,792 – 4,797</span></div>
+        <div class="row"><span class="k">Stop loss</span><span class="v">4,808 – 4,812</span></div>
+        <div class="sep"></div>
+        <div class="row"><span class="k">Target</span><span class="v vr">4,770 · 4,752 · 4,720</span></div>
+        <div class="mbar mba">Selama harga di atas 4,795, skenario ini belum berlaku.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sec">Level-level penting hari ini</div>
+  <div class="levels">
+    <div class="lc lcr"><div class="lc-n">Resistance mayor</div><div class="lc-v">4,870–4,875</div><div class="lc-d">Supply H4</div></div>
+    <div class="lc lcr"><div class="lc-n">Resistance intraday</div><div class="lc-v">4,838–4,842</div><div class="lc-d">High H1 kemarin</div></div>
+    <div class="lc lca"><div class="lc-n">Zona choppy</div><div class="lc-v">4,820–4,828</div><div class="lc-d">Skip — no edge</div></div>
+    <div class="lc lcg"><div class="lc-n">Area beli utama</div><div class="lc-v">4,800–4,812</div><div class="lc-d">Demand M30/H1</div></div>
+    <div class="lc lcg"><div class="lc-n">Support mayor H1</div><div class="lc-v">4,780–4,790</div><div class="lc-d">Higher low · kritis</div></div>
+    <div class="lc lcn"><div class="lc-n">Deep support H4</div><div class="lc-v">4,720–4,735</div><div class="lc-d">Demand H4</div></div>
+    <div class="lc lcg"><div class="lc-n">Breakout atas</div><div class="lc-v">Close M15 &gt; 4,842</div><div class="lc-d">Wajib body candle</div></div>
+    <div class="lc lcr"><div class="lc-n">Breakout bawah</div><div class="lc-v">Close H1 &lt; 4,790</div><div class="lc-d">Bias gugur total</div></div>
+  </div>
+
+  <div class="sec">Zona yang dilarang untuk entry</div>
+  <div class="zones">
+    <div class="zc zr"><div class="z-l">Dead zone</div><span class="z-e">00:00–03:00 ET</span><span class="z-w">11:00–14:00 WIB</span></div>
+    <div class="zc zr"><div class="z-l">Pre-data · wajib close</div><span class="z-e">08:00–08:30 ET</span><span class="z-w">19:00–19:30 WIB</span></div>
+    <div class="zc za2"><div class="z-l">NY midday · sepi</div><span class="z-e">11:30–14:00 ET</span><span class="z-w">22:30–01:00 WIB</span></div>
+  </div>
+
+  <div class="sec">Hasil trading hari ini</div>
+  <div class="res-grid">
+    <div class="res-card"><div class="res-lbl">Total Trade</div><div class="res-val" id="r-total">—</div></div>
+    <div class="res-card"><div class="res-lbl">Win</div><div class="res-val" id="r-win" style="color:#3B6D11">—</div></div>
+    <div class="res-card"><div class="res-lbl">Loss</div><div class="res-val" id="r-loss" style="color:#A32D2D">—</div></div>
+    <div class="res-card"><div class="res-lbl">Net Pip</div><div class="res-val" id="r-pip">—</div></div>
+  </div>
+  <div class="res-note" id="r-note">Hasil trading hari ini belum tersedia. Update akan muncul di sini setelah sesi selesai.</div>
+
+  <div class="sec">Aturan yang tidak boleh dilanggar</div>
+  <div class="ri"><span class="rix">✕</span><span class="ri-t"><strong>Zero posisi saat 08:30 ET / 19:30 WIB.</strong> Close semua sebelum 08:25 ET. Tidak ada pengecualian.</span></div>
+  <div class="ri"><span class="rix">✕</span><span class="ri-t"><strong>Maksimal 2 stop loss berturut-turut.</strong> Kalau sudah kena 2 SL, tutup platform. Ini bukan momen balas dendam ke market.</span></div>
+  <div class="ri"><span class="rix">✕</span><span class="ri-t"><strong>Tidak ada entry tanpa trigger M15 valid.</strong> Wick menembus level bukan konfirmasi — yang dihitung body candle yang menutup.</span></div>
+  <div class="ri"><span class="rix">✕</span><span class="ri-t"><strong>Tidak ada average down.</strong> SL kena = posisi ditutup. Bukan ditambah lot.</span></div>
+  <div class="ri"><span class="rix">✕</span><span class="ri-t"><strong>Tidak ada entry di zona 4,820–4,828.</strong> Choppy, tidak ada edge. Lebih baik nonton dari luar.</span></div>
+  <div class="ri"><span class="rio">✓</span><span class="ri-t"><strong>Ambil partial profit di T1, wajib.</strong> Setelah T1 tercapai, geser SL ke breakeven.</span></div>
+  <div class="ri"><span class="rio">✓</span><span class="ri-t"><strong>Maksimal risk 1–2% per trade.</strong> Gold volatil, range hariannya 40–80 pip. Jangan oversize hanya karena yakin.</span></div>
+  <div class="ri"><span class="rio">✓</span><span class="ri-t"><strong>Tidak entry juga adalah pilihan yang sah.</strong> Hari yang dilewati karena market tidak clean itu keputusan profesional.</span></div>
+  <div class="ri"><span class="rii">!</span><span class="ri-t"><strong>Semua posisi intraday wajib ditutup sebelum 16:30 ET / 03:30 WIB.</strong> Gold sering balik tajam di penghujung NY.</span></div>
+
+</div>
+
+<div class="footer">
+  <span>LUXTRADE ACADEMY</span> · Sinyal ini bersifat edukatif. Bukan rekomendasi investasi. Selalu kelola risiko kamu sendiri.
+</div>
+
+<div id="ownerPanel" style="display:none">
+  <div class="op">
+    <div class="op-title">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#BA7517" stroke-width="1.3"/><path d="M8 4v4l2.5 2" stroke="#BA7517" stroke-width="1.3" stroke-linecap="round"/></svg>
+      Panel Kontrol · Luxtrade Academy
+    </div>
+
+    <div class="op-sec">Harga &amp; kondisi market</div>
+    <div class="op-row"><label>Harga analisa</label><input type="text" id="inp-price" value="4,823.00"></div>
+    <div class="op-row">
+      <label>Bias hari ini</label>
+      <div class="bias-btns">
+        <button class="bbtn act-bull" onclick="setBias('bull',this)">Bullish</button>
+        <button class="bbtn" onclick="setBias('bear',this)">Bearish</button>
+        <button class="bbtn" onclick="setBias('neu',this)">Netral</button>
+        <button class="bbtn" onclick="setBias('rng',this)">Ranging</button>
+      </div>
+    </div>
+    <div class="op-row"><label>Kondisi 1</label><input type="text" id="inp-c1" value="Ranging pre-expansion"></div>
+    <div class="op-row"><label>Kondisi 2</label><input type="text" id="inp-c2" value="Fakeout risk aktif"></div>
+    <div class="op-row"><label>Prioritas</label><input type="text" id="inp-c3" value="Prioritas: Buy the dip"></div>
+
+    <div class="op-sep"></div>
+    <div class="op-sec">Status setup</div>
+    <div class="setup-ctrl"><div class="setup-ctrl-name">Setup 1 · Buy the dip</div><div class="status-btns"><button class="sbtn active-w" onclick="setStatus(1,'w',this)">Menunggu</button><button class="sbtn" onclick="setStatus(1,'t',this)">Triggered</button><button class="sbtn" onclick="setStatus(1,'tp',this)">Hit TP</button><button class="sbtn" onclick="setStatus(1,'sl',this)">Hit SL</button><button class="sbtn" onclick="setStatus(1,'x',this)">Batal</button></div></div>
+    <div class="setup-ctrl"><div class="setup-ctrl-name">Setup 2 · Breakout buy</div><div class="status-btns"><button class="sbtn active-w" onclick="setStatus(2,'w',this)">Menunggu</button><button class="sbtn" onclick="setStatus(2,'t',this)">Triggered</button><button class="sbtn" onclick="setStatus(2,'tp',this)">Hit TP</button><button class="sbtn" onclick="setStatus(2,'sl',this)">Hit SL</button><button class="sbtn" onclick="setStatus(2,'x',this)">Batal</button></div></div>
+    <div class="setup-ctrl"><div class="setup-ctrl-name">Setup 3 · Post-data NY</div><div class="status-btns"><button class="sbtn active-w" onclick="setStatus(3,'w',this)">Menunggu</button><button class="sbtn" onclick="setStatus(3,'t',this)">Triggered</button><button class="sbtn" onclick="setStatus(3,'tp',this)">Hit TP</button><button class="sbtn" onclick="setStatus(3,'sl',this)">Hit SL</button><button class="sbtn" onclick="setStatus(3,'x',this)">Batal</button></div></div>
+    <div class="setup-ctrl"><div class="setup-ctrl-name">Setup 4 · Bias balik bearish</div><div class="status-btns"><button class="sbtn" onclick="setStatus(4,'w',this)">Menunggu</button><button class="sbtn" onclick="setStatus(4,'t',this)">Triggered</button><button class="sbtn" onclick="setStatus(4,'tp',this)">Hit TP</button><button class="sbtn" onclick="setStatus(4,'sl',this)">Hit SL</button><button class="sbtn active-x" onclick="setStatus(4,'x',this)">Tidak aktif</button></div></div>
+
+    <div class="op-sep"></div>
+    <div class="op-sec">Hasil trading</div>
+    <div class="res-inputs">
+      <div class="res-inp-item"><label>Total Trade</label><input type="number" id="inp-total" placeholder="0" min="0"></div>
+      <div class="res-inp-item"><label>Win</label><input type="number" id="inp-win" placeholder="0" min="0"></div>
+      <div class="res-inp-item"><label>Loss</label><input type="number" id="inp-loss" placeholder="0" min="0"></div>
+      <div class="res-inp-item"><label>Net Pip (±)</label><input type="number" id="inp-pip" placeholder="0"></div>
+    </div>
+    <div class="op-row"><label>Catatan hasil</label><textarea id="inp-note">Hasil trading hari ini belum tersedia. Update akan muncul di sini setelah sesi selesai.</textarea></div>
+
+    <div class="op-sep"></div>
+    <div class="op-sec">Pesan harian</div>
+    <div class="op-row"><textarea id="inp-msg">Market tidak pernah berbohong — yang sering salah adalah cara kita membacanya. Plan hari ini sudah tersusun dengan cermat. Ikuti alurnya, jaga disiplin di setiap level, dan biarkan setup yang datang ke kamu — bukan sebaliknya. Tidak ada yang lebih mahal dari sebuah keputusan yang terburu-buru.</textarea></div>
+
+    <button class="apply-btn" onclick="applyAll()">Terapkan semua perubahan</button>
+    <div style="font-size:11px;color:#3B6D11;text-align:center;margin-top:8px" id="saveNote"></div>
+  </div>
+</div>
+
+<script>
+var DAYS=['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
+var MONTHS=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+var SESI=[
+  {name:'Dead Zone',tag:'No trade',etH:0,etM:0,endH:3,endM:0,bg:'#fcebeb',color:'#791F1F',border:'#F09595',ph:0},
+  {name:'Pre-London',tag:'Siaga',etH:3,etM:0,endH:5,endM:0,bg:'#faeeda',color:'#633806',border:'#EF9F27',ph:1},
+  {name:'London Open',tag:'Zona entry',etH:5,etM:0,endH:8,endM:0,bg:'#eaf3de',color:'#27500a',border:'#97C459',ph:2},
+  {name:'Pre-Data',tag:'Close semua!',etH:8,etM:0,endH:8,endM:30,bg:'#fcebeb',color:'#791F1F',border:'#F09595',ph:3},
+  {name:'Data Release',tag:'No trade',etH:8,etM:30,endH:9,endM:0,bg:'#fcebeb',color:'#791F1F',border:'#F09595',ph:4},
+  {name:'Post-Data NY',tag:'Setup terbaik',etH:9,etM:0,endH:11,endM:30,bg:'#e6f1fb',color:'#0C447C',border:'#85B7EB',ph:5},
+  {name:'NY Midday',tag:'Manage posisi',etH:11,etM:30,endH:14,endM:0,bg:'#faeeda',color:'#633806',border:'#EF9F27',ph:6},
+  {name:'NY Close',tag:'Close & reset',etH:14,etM:0,endH:17,endM:0,bg:'#fcebeb',color:'#791F1F',border:'#F09595',ph:7},
+];
+function pad(n){return n<10?'0'+n:''+n;}
+function tick(){
+  var now=new Date();
+  var wib=new Date(now.getTime()+now.getTimezoneOffset()*60000+7*3600000);
+  document.getElementById('clk').textContent=pad(wib.getHours())+':'+pad(wib.getMinutes())+':'+pad(wib.getSeconds());
+  document.getElementById('clkd').textContent=DAYS[wib.getDay()]+', '+wib.getDate()+' '+MONTHS[wib.getMonth()]+' '+wib.getFullYear()+' WIB';
+  var et=new Date(now.toLocaleString('en-US',{timeZone:'America/New_York'}));
+  var em=et.getHours()*60+et.getMinutes();
+  var sb=document.getElementById('sesiNow');
+  var activePh=-1;
+  for(var i=0;i<SESI.length;i++){
+    if(em>=SESI[i].etH*60+SESI[i].etM&&em<SESI[i].endH*60+SESI[i].endM){
+      sb.textContent=SESI[i].name+' · '+SESI[i].tag;
+      sb.style.background=SESI[i].bg;sb.style.color=SESI[i].color;sb.style.border='0.5px solid '+SESI[i].border;
+      activePh=SESI[i].ph;break;
+    }
+  }
+  if(activePh===-1){sb.textContent='Market tutup';sb.style.background='#f1efe8';sb.style.color='#888780';sb.style.border='0.5px solid #b4b2a9';}
+  for(var j=0;j<8;j++){var el=document.getElementById('ph'+j);if(el)el.classList.toggle('now',j===activePh);}
+  var found=false;
+  for(var k=0;k<SESI.length;k++){
+    var sm=SESI[k].etH*60+SESI[k].etM;
+    if(sm>em){
+      var diff=(sm-em)*60-et.getSeconds();
+      document.getElementById('cdN').textContent=SESI[k].name;
+      document.getElementById('cdT').textContent=pad(Math.floor(diff/3600))+':'+pad(Math.floor((diff%3600)/60))+':'+pad(diff%60);
+      document.getElementById('cdW').textContent=SESI[k].etH+':'+pad(SESI[k].etM)+' ET';
+      found=true;break;
+    }
+  }
+  if(!found){document.getElementById('cdN').textContent='Semua sesi selesai';document.getElementById('cdT').textContent='';document.getElementById('cdW').textContent='';}
+}
+tick();setInterval(tick,1000);
+
+var statusMap={1:'w',2:'w',3:'w',4:'x'};
+var statusCls={w:'st-w',t:'st-t',tp:'st-tp',sl:'st-sl',x:'st-x'};
+var statusLabel={w:'Menunggu',t:'Triggered',tp:'Hit TP',sl:'Hit SL',x:'Tidak aktif'};
+var activeCls={w:'active-w',t:'active-t',tp:'active-tp',sl:'active-sl',x:'active-x'};
+var currentBias='bull';
+var biasStyles={
+  bull:{bg:'#eaf3de',color:'#27500a',border:'0.5px solid #97C459',text:'Bias: Bullish'},
+  bear:{bg:'#fcebeb',color:'#791F1F',border:'0.5px solid #E24B4A',text:'Bias: Bearish'},
+  neu:{bg:'#e6f1fb',color:'#0C447C',border:'0.5px solid #85B7EB',text:'Bias: Netral'},
+  rng:{bg:'#faeeda',color:'#633806',border:'0.5px solid #EF9F27',text:'Bias: Ranging'},
+};
+function setBias(b,el){currentBias=b;document.querySelectorAll('.bbtn').forEach(function(x){x.className='bbtn';});var cls={bull:'act-bull',bear:'act-bear',neu:'act-neu',rng:'act-rng'};el.classList.add(cls[b]);}
+function setStatus(num,s,el){
+  statusMap[num]=s;
+  el.parentElement.querySelectorAll('.sbtn').forEach(function(b){b.className='sbtn';});
+  el.classList.add(activeCls[s]);
+  autoCalcResults();
+}
+function autoCalcResults(){
+  var total=0,win=0,loss=0;
+  for(var i=1;i<=4;i++){
+    var s=statusMap[i];
+    if(s==='tp'){total++;win++;}
+    else if(s==='sl'){total++;loss++;}
+    else if(s==='t'){total++;}
+  }
+  document.getElementById('r-total').textContent=total>0?total:'—';
+  document.getElementById('r-win').textContent=win>0?win:'—';
+  document.getElementById('r-loss').textContent=loss>0?loss:'—';
+  document.getElementById('inp-total').value=total||'';
+  document.getElementById('inp-win').value=win||'';
+  document.getElementById('inp-loss').value=loss||'';
+}
+function applyAll(){
+  var price=document.getElementById('inp-price').value.trim();
+  if(price)document.getElementById('priceDisp').textContent=price;
+  var bs=biasStyles[currentBias];
+  var bd=document.getElementById('biasDisp');
+  bd.textContent=bs.text;bd.style.background=bs.bg;bd.style.color=bs.color;bd.style.border=bs.border;
+  var c1=document.getElementById('inp-c1').value.trim();
+  var c2=document.getElementById('inp-c2').value.trim();
+  var c3=document.getElementById('inp-c3').value.trim();
+  if(c1)document.getElementById('cond1Disp').textContent=c1;
+  if(c2)document.getElementById('cond2Disp').textContent=c2;
+  if(c3)document.getElementById('cond3Disp').textContent=c3;
+  for(var i=1;i<=4;i++){var el=document.getElementById('d-s'+i);el.className='st '+statusCls[statusMap[i]];el.textContent=statusLabel[statusMap[i]];}
+  var msg=document.getElementById('inp-msg').value.trim();
+  if(msg)document.getElementById('msgDisp').textContent=msg;
+  var pip=document.getElementById('inp-pip').value;
+  var note=document.getElementById('inp-note').value.trim();
+  var pipEl=document.getElementById('r-pip');
+  if(pip!==''){var p=parseFloat(pip);pipEl.textContent=(p>0?'+':'')+p;pipEl.style.color=p>0?'#3B6D11':p<0?'#A32D2D':'#1a1a18';}
+  if(note)document.getElementById('r-note').textContent=note;
+  document.getElementById('saveNote').textContent='✓ Perubahan berhasil diterapkan.';
+  setTimeout(function(){document.getElementById('saveNote').textContent='';},3000);
+}
+
+var _buf='';var _pw='ari301098';var _open=false;
+function _togglePanel(){
+  _open=!_open;
+  var p=document.getElementById('ownerPanel');
+  p.style.display=_open?'block':'none';
+  if(_open)setTimeout(function(){p.scrollIntoView({behavior:'smooth',block:'start'});},100);
+}
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){_buf='';if(_open){document.getElementById('ownerPanel').style.display='none';_open=false;}return;}
+  if(e.key.length===1){_buf+=e.key;if(_buf.length>_pw.length)_buf=_buf.slice(-_pw.length);if(_buf===_pw){_togglePanel();_buf='';}}
+});
+var _tapCount=0,_tapTimer=null;
+document.getElementById('brandTap').addEventListener('click',function(){
+  _tapCount++;
+  if(_tapTimer)clearTimeout(_tapTimer);
+  _tapTimer=setTimeout(function(){_tapCount=0;},800);
+  if(_tapCount>=10){_tapCount=0;clearTimeout(_tapTimer);_togglePanel();}
+});
+</script>
+</body>
+</html>
